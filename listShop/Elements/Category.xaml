@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="listShop.Elements.Category"
+             xmlns:controls="clr-namespace:listShop.Elements">
+    <VerticalStackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Text="🗑️" Grid.Column="0" x:Name="delete" Clicked="delete_Clicked"/>
+            <Button Text="Nazwa kategorii" x:Name="name" Clicked="name_Clicked" Grid.Column="1" />
+            <Button Text="+" Grid.Column="2" x:Name="plusBtn" Clicked="plusBtn_Clicked"/>
+        </Grid>
+        <VerticalStackLayout x:Name="elementy">
+
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentView>

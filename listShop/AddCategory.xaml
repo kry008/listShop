@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="listShop.AddCategory"
+             Title="AddCategory">
+    <VerticalStackLayout BackgroundColor="White" Padding="10">
+        <Label Text="Dodaj nową kategorię" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" TextColor="Black"/>
+        <Editor x:Name="categoryName" TextColor="Black" Placeholder="Nazwa kategorii" />
+        <StackLayout RadioButtonGroup.GroupName="colors">
+            <Label TextColor="Black">Kolor kategorii</Label>
+            <RadioButton Value="Red" Content="Czerwony" TextColor="Black" CheckedChanged="selectedRadio"/>
+            <RadioButton Value="LightBlue" Content="Niebieski" TextColor="Black" CheckedChanged="selectedRadio"/>
+            <RadioButton Value="LightGreen" Content="Zielony" TextColor="Black" CheckedChanged="selectedRadio"/>
+            <RadioButton Value="Yellow" Content="Żółty" TextColor="Black" CheckedChanged="selectedRadio"/>
+            <RadioButton Value="Pink" Content="Różowy" TextColor="Black" CheckedChanged="selectedRadio"/>
+            <RadioButton Value="Orange" Content="Pomarańczowy" TextColor="Black" CheckedChanged="selectedRadio"/>
+        </StackLayout>
+        <Button Text="Dodaj" Clicked="addNewCategory_Clicked" BackgroundColor="Black" TextColor="White"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="listShop.AddElementList"
+             Title="AddElementList">
+    <VerticalStackLayout BackgroundColor="White" Padding="10">
+        <Label FontSize="20" TextColor="Black" x:Name="catName" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Editor x:Name="listName" Placeholder="Przedmiot" TextColor="Black"/>
+        <!--Make select for: szt, l, kg, g-->
+        <StackLayout RadioButtonGroup.GroupName="units">
+            <Label TextColor="Black">Jednostka</Label>
+            <RadioButton Value="szt" Content="szt" TextColor="Black" CheckedChanged="selectedRadio"/>
+            <RadioButton Value="l" Content="l" TextColor="Black" CheckedChanged="selectedRadio"/>
+            <RadioButton Value="kg" Content="kg" TextColor="Black" CheckedChanged="selectedRadio"/>
+            <RadioButton Value="g" Content="g" TextColor="Black" CheckedChanged="selectedRadio"/>
+        </StackLayout>
+        <Button Text="Dodaj" Clicked="addNewItem_Clicked" BackgroundColor="Black" TextColor="White"/>
+    </VerticalStackLayout>
+</ContentPage>
