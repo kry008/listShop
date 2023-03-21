@@ -9,14 +9,12 @@ public partial class MainPage : ContentPage
     private static string pass = "";
     private static string db = "db";
     string cs = "server=" + serverHost + ";userid="+login+ ";password="+pass+ ";database="+db;
-    //string cs = @"server=129.151.94.184;userid=u10_3EynN2DWo2;password=LF8TQgVX6naM=Dgo.afdmjLo;database=s10_maui";
     string random = string.Empty;
 
     public MainPage()
     {
         InitializeComponent();
         string path = Path.Combine(FileSystem.AppDataDirectory, "random");
-        //DisplayAlert("Path", path, "OK");
         if (File.Exists(path))
         {
             using (StreamReader sr = File.OpenText(path))

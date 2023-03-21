@@ -51,9 +51,7 @@ public partial class Category : ContentView
                 delete.TextColor = Color.Parse(rdr.GetString("KolorCzcionki"));
             }
             if (rdr.GetValue(4).ToString() == "1")
-            {
                 openingCat();
-            }
 
         }
         rdr.Close();
@@ -75,9 +73,7 @@ public partial class Category : ContentView
                 i++;
             }
             if (i == 0)
-            {
                 elementy.Add(new Label { Text = "Brak elementów", TextColor = Color.Parse("Black") });
-            }
         }
         open = !open;
 
